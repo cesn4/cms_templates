@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  firebase_core: ^2.10.0
   smart_admin_dashboard: 
     path: ./apps/smart_admin
   admin:
