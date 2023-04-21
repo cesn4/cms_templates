@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cms_templates",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "cms_templates (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "cms_templates (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "smart_admin",
+            "cwd": "apps/smart_admin",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "smart_admin (profile mode)",
+            "cwd": "apps/smart_admin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "smart_admin (release mode)",
+            "cwd": "apps/smart_admin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
