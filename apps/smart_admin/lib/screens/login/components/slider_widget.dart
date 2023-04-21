@@ -76,7 +76,10 @@ class _SliderWidgetState extends State<SliderWidget> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fitWidth,
-                              image: AssetImage(slides[index].image!),
+                              image: AssetImage(
+                                slides[index].image!,
+                                package: 'smart_admin_dashboard',
+                              ),
                             ),
                             borderRadius: BorderRadius.all(
                               Radius.circular(8.0),
