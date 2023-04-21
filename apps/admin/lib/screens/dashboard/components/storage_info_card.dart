@@ -31,7 +31,7 @@ class StorageInfoCard extends StatelessWidget {
           SizedBox(
             height: 20,
             width: 20,
-            child: SvgPicture.asset(svgSrc),
+            child: SvgPicture.asset(svgSrc,  package: 'admin',),
           ),
           Expanded(
             child: Padding(
@@ -48,7 +48,7 @@ class StorageInfoCard extends StatelessWidget {
                     "$numOfFiles Files",
                     style: Theme.of(context)
                         .textTheme
-                        .caption!
+                        .bodySmall!
                         .copyWith(color: Colors.white70),
                   ),
                 ],

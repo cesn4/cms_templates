@@ -65,8 +65,10 @@ class ProfileCard extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage("assets/images/profile_pic.png",
-                package: 'smart_admin_dashboard'),
+            backgroundImage: AssetImage(
+              "assets/images/profile_pic.png",
+              package: 'smart_admin_dashboard',
+            ),
           ),
           if (!Responsive.isMobile(context))
             Padding(
@@ -74,7 +76,9 @@ class ProfileCard extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Deniz Çolak"),
             ),
-          Icon(Icons.keyboard_arrow_down),
+          Icon(
+            Icons.keyboard_arrow_down,
+          ),
         ],
       ),
     );

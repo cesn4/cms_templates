@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
         if (!Responsive.isMobile(context))
           Text(
             "Dashboard",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
@@ -56,6 +56,7 @@ class ProfileCard extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/profile_pic.png",
+            package: 'admin',
             height: 38,
           ),
           if (!Responsive.isMobile(context))
@@ -96,7 +97,7 @@ class SearchField extends StatelessWidget {
               color: primaryColor,
               borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
-            child: SvgPicture.asset("assets/icons/Search.svg"),
+            child: SvgPicture.asset("assets/icons/Search.svg",  package: 'admin',),
           ),
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:admin/admin.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_admin_dashboard/smart_admin.dart';
 
@@ -5,27 +6,63 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int activeView = 0;
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+      // home: SmartAdmin(),
+      home: Stack(
+        children: [
+          if (activeView == 0) SmartAdmin() else if (activeView == 1) Admin(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: activeView == 0
+                        ? MaterialStateProperty.all(Colors.blue)
+                        : MaterialStateProperty.all(Colors.blueGrey),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      activeView = 0;
+                    });
+                  },
+                  child: const Text('Smart Admin'),
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: activeView == 1
+                        ? MaterialStateProperty.all(Colors.blue)
+                        : MaterialStateProperty.all(Colors.blueGrey),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      activeView = 1;
+                    });
+                  },
+                  child: const Text('Responsive Admin'),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
-      home: SmartAdmin(),
     );
   }
 }

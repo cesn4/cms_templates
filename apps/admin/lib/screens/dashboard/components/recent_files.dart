@@ -23,10 +23,10 @@ class RecentFiles extends StatelessWidget {
         children: [
           Text(
             "Recent Files",
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(
-            width: double.infinity,
+            height: 400,
             child: DataTable2(
               columnSpacing: defaultPadding,
               minWidth: 600,
@@ -63,6 +63,7 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
               fileInfo.icon!,
               height: 30,
               width: 30,
+              package: 'admin',
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
